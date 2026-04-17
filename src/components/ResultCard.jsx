@@ -54,7 +54,7 @@ const ResultCard = ({ item, activeTab, onPreview, onDownload }) => {
             event.stopPropagation()
             onDownload(item)
           }}
-          className="bg-white/10 hover:bg-white/20 backdrop-blur-md py-1.25 px-2 rounded-full transition-colors"
+          className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-2 pt-1 rounded-full transition-colors"
           aria-label="Download media"
         >
           <span className="material-symbols-outlined text-white text-lg">download</span>

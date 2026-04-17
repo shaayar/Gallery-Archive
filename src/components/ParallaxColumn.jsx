@@ -5,7 +5,10 @@ import ResultCard from './ResultCard'
 const MotionDiv = motion.div
 
 const ParallaxColumn = ({ items, speed, activeTab, onPreview, onDownload }) => {
-  const { scrollY } = useScroll()
+  const { scrollY } = useScroll({ 
+    target: window,
+    syncInternalState: true 
+  })
   const yRaw = useTransform(scrollY, [0, 1600], [0, speed])
   const y = useSpring(yRaw, { stiffness: 90, damping: 28, mass: 0.2 })
 
